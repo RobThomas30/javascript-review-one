@@ -4,15 +4,38 @@
 
 // Create an object that has four properties. One property should be set so that the value is a number, another property set to a string, the third to an array, and the fourth to a function. This function should simply console.log the value of the first property.
 
+const object = {
+  string: "string value",
+  number: 123,
+  array: ["things", "in", "array"],
+  log: console.log("string") 
+}
+
 // 2.
 
 // Write a constructor function named Car that takes one argument. It should use that argument to set the brand attribute of the car object. There should be a second attribute that stores the value for colour but this should be explicitly set to ‘red’. 
 
 // Note that a constructor function is the old school syntax that was used in javascript before the sugar class syntax came along in ES6. Don't use the sugar syntax for this question! 
 
+function Car (make) {
+  this.make = make;
+  this.color = "Red";
+}
+
+let redCar = new Car("Lamborghini")
+
 // 3.
 
 // Can you access variables defined outside of functions within the scope of functions in JS? Show a simple example of this being used? (Define a constant in global scope and use that in a very simple function.)
+
+var global = "I have global scope when defined globally"
+
+function globalVariables() {
+  // Functions have block scope 
+  console.log(global)
+}
+
+globalVariables()
 
 // 4.
 
