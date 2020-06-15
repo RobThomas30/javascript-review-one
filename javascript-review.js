@@ -110,11 +110,14 @@ myFunc(1, 2, 3)
 // 12.
 
 // What is a javascript package manager? Name the 2 main package managers
+
 // A package manager is a piece of software that lets you manage the dependencies the two most popular package managers are npm and yarn
 
 // 13.
 
 // What is a package.json? What is it similar to when comparing it to ruby?
+
+// package.json is a root file that holds metadata related to the project such as versions, dependencies, scripts and more. package managers use this file to set-up dependencies.
 
 // 14.
 
@@ -129,7 +132,23 @@ myFunc(1, 2, 3)
 // 15.
 
 // a.
-// Define a function called addNum with that takes two number arguments. In this function simply return the addition of these numbers. 
+// Define a function called addNum with that takes two number arguments. In this function simply return the addition of these numbers.
+
+const addMoreNum = (num1, num2) => {
+  return num1 + num2
+}
+
+const numPlusFunc = (num1, num2, cb) => {
+  const result = cb(num1, num2)
+  return {
+    result: result,
+    string: "The two numbers have been added together!"
+  }
+}
+
+console.log(numPlusFunc(10, 20, addMoreNum))
+
+
 
 // b.
 // Write a second function called numsPlusFunct that takes three arguments, two numbers and a function. Inside numsPlusFunct call the function that is passed as an argument, and pass the two number arguments to this function. numsPlusFunct will return an object where the first property has the value returned from that function call, and the second property is a string. 
