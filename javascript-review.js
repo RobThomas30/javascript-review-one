@@ -134,6 +134,12 @@ myFunc(1, 2, 3)
 // a.
 // Define a function called addNum with that takes two number arguments. In this function simply return the addition of these numbers.
 
+// b.
+// Write a second function called numsPlusFunct that takes three arguments, two numbers and a function. Inside numsPlusFunct call the function that is passed as an argument, and pass the two number arguments to this function. numsPlusFunct will return an object where the first property has the value returned from that function call, and the second property is a string. 
+
+// c.
+// You have now made two functions. Call the numsPlusFunct and pass addNum as the appropriate argument. 
+
 const addMoreNum = (num1, num2) => {
   return num1 + num2
 }
@@ -149,14 +155,13 @@ const numPlusFunc = (num1, num2, cb) => {
 console.log(numPlusFunc(10, 20, addMoreNum))
 
 
-
-// b.
-// Write a second function called numsPlusFunct that takes three arguments, two numbers and a function. Inside numsPlusFunct call the function that is passed as an argument, and pass the two number arguments to this function. numsPlusFunct will return an object where the first property has the value returned from that function call, and the second property is a string. 
-
-// c.
-// You have now made two functions. Call the numsPlusFunct and pass addNum as the appropriate argument. 
-
 // 16.
+
+const fs = require('fs')
+fs.readFile('./hello.txt', "utf-8", (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
 
 // Define a .txt file and put this text into it => "hello world"
 // Using the fs module in node read this text from the file into this program and console.log it
