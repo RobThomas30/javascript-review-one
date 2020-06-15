@@ -128,6 +128,10 @@ myFunc(1, 2, 3)
 // b. 
 // Install the package that allows us to get user input in node
 // Store the result of the user input in a variable name then console.log the value of the variable on the subsequent line 
+var readlineSync = require('readline-sync');
+
+// const userInput = readlineSync.question('What is your name? ');
+// console.log("Hi, " + `${userInput}` + " Nice to meet you!")
 
 // 15.
 
@@ -240,6 +244,30 @@ fs.readFile('./hello.txt', "utf-8", (err, data) => {
 // Define another function named accessSum and make it an async function. Using the await keyword call waitBeforeSum inside of the accessSum function and store the resolve in a variable called result. console.log the result inside of the async function
 
 // Add a try and catch block to your accessSum function, make it go into the catch when the sum is greater than 10, when you console.log the the error that you get as a parameter in the catch it should say 'the sum was greater than 10'
+
+const waitBeforeSum = (num1, num2) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const sum = num1 + num2
+      if (sum > 10) {
+        reject(new Error("Greater than 10 error"))
+      }
+      resolve(sum)
+    }, 1000)
+  })
+}
+
+const asyncSum = async (num1, num2) => {
+  try {
+    const waitSumPromise = await waitBeforeSum(num1, num2)
+    console.log(waitSumPromise)
+  } catch(err) {
+    console.log(err.message)
+  }
+}
+
+asyncSum(20, 20)
+
 
 // 24. 
 
