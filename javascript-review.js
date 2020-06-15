@@ -110,6 +110,7 @@ myFunc(1, 2, 3)
 // 12.
 
 // What is a javascript package manager? Name the 2 main package managers
+// A package manager is a piece of software that lets you manage the dependencies the two most popular package managers are npm and yarn
 
 // 13.
 
