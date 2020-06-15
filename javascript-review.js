@@ -4,7 +4,7 @@
 
 // Create an object that has four properties. One property should be set so that the value is a number, another property set to a string, the third to an array, and the fourth to a function. This function should simply console.log the value of the first property.
 
-const object = {
+const Object = {
   string: "string value",
   number: 123,
   array: ["things", "in", "array"],
@@ -40,6 +40,10 @@ globalVariables()
 // 4.
 
 // What two ways can be used to access the properties of objects in JS? Give examples of both (although assume the objects have been defined).
+
+console.log(redCar.make)
+
+console.log(redCar['color'])
 
 // 5.
 
