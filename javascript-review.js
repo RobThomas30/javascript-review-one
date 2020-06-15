@@ -41,38 +41,71 @@ globalVariables()
 
 // What two ways can be used to access the properties of objects in JS? Give examples of both (although assume the objects have been defined).
 
-console.log(redCar.make)
+redCar.make // dot syntax 
 
-console.log(redCar['color'])
+redCar['color'] // square bracket notation
 
 // 5.
 
 // What is JSON? Be clear but concise.
 
+// JSON stands for JavaScript Object Notation, it's a format for storing and transporting data.
+// It was popularized because it's "self-describing" and easy to understand
+// eg:
+// {
+//   "me":[
+//       {"firstName":"Rob", "lastName":"Thomas"},
+//       {"age":"30"}
+//   ]
+// }
+
 // 6.
 
 // What is a callback function?
+// A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
 
 // 7.
 
-// Define a function with that takes two number arguments and a callback. The function will add the two numbers and pass them to the callback as an argument. Now call this function and in the callback simply console.log out the argument that has been passed through.
+// Define a function that takes two number arguments and a callback. The function will add the two numbers and pass them to the callback as an argument. Now call this function and in the callback simply console.log out the argument that has been passed through.
+
+function addNum(num1, num2, cb) {
+  const result = num1 + num2
+  cb(result)
+}
+
+function logResult(result) {
+  console.log(result)
+}
+
+addNum(5, 5, logResult)
+
 
 // 8.
 
 // Why do we use promises?
+// Promises allow asynchronous operations even though javascript usually runs synchronously    
 
 // 9.
 
 // What are the two functions at our disposal if we are defining our own promise?
 // Hint: They're in the new Promise callback function as parameters. 
+// Resolve: used for continuation of our code after a promise is fulfilled and an async process can take place.
+// Reject: used for handling errors that occur when a promise is rejected 
 
 // 10.
 
 // What's the different between the rest and spread syntax?
+// Rest Parameter is collecting all remaining elements into an array.
+// Spread Operator is unpacking collected elements such as arrays into single elements.
 
 // 11. 
 
 // Define a function myFunc(), it should take 3 number arguments, use the rest syntax in the myFunc parameters and console.log out the value generated from the rest. 
+function myFunc() {
+
+}
+
+myFunc(1, 2, 3)
 
 // 12.
 
